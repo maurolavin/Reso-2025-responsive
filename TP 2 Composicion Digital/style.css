@@ -1,0 +1,208 @@
+nav {
+    max-width: 100vw;
+}
+
+.custom-section {
+    padding-top: 80px;
+    min-height: 100vh; 
+}
+
+.custom-logo-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.actividades-text {
+    font-size: 64px;
+}
+
+.foto-perfil {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #eee;
+}
+.sidebar-link {
+    display: block;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    color: #333;
+    text-decoration: none;
+}
+.sidebar-link.active,
+.sidebar-link:hover {
+    background-color: #f0f2ff;
+    color: #1a1b4b;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-media-footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-footer a {
+    padding: 20px;
+}
+
+.social-media-footer img {
+    width: 30px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, auto);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+}
+
+.bloque-intro {
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 2;
+}
+
+.bloque-lineup {
+  grid-column: 6 / span 4;
+  grid-row: 1 / span 2;
+}
+
+.dias-lineup {
+  display: flex;
+  gap: 40px;
+}
+
+.bloque-cifras {
+  grid-column: 2 / span 4;
+  grid-row: 3 / span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.cifra-item {
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bloque-edicion {
+  grid-column: 6 / span 4;
+  grid-row: 3 / span 2;
+  background: #F9D53A;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.bloque-resumen {
+  grid-column: 6 / span 4;
+  grid-row: 5 / span 1;
+  display: flex;
+  gap: 15px;
+}
+
+.resumen-item {
+  background: #F9D53A;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.foto {
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.foto-deadmau5 {
+  grid-column: 10 / span 3;
+  grid-row: 1 / span 3;
+  background-image: url('img/deadmau5.jpg');
+}
+
+.foto-flume {
+  grid-column: 10 / span 3;
+  grid-row: 4 / span 3;
+  background-image: url('img/flume.jpg');
+}
+
+.btn-check:checked + .card-entradas {
+    outline: 3px solid #f8c146;
+    box-shadow: 0 0 10px rgba(255,193,7,0.6);
+}
+.card-entradas:hover {
+    transform: scale(1.02);
+    transition: 0.15s;
+}
+
+@media (min-width: 992px) {
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-right: 5rem;
+    }
+    .image-display-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    .custom-logo-image {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .custom-section {
+            min-height: fit-content; 
+        }
+
+    .custom-section .row {
+            flex-direction: column;
+        }
+
+    .img-inicio {
+        padding-bottom: 2em;
+    }
+
+    .grilla-festival {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    }
+
+    .bloque-intro, .bloque-lineup, .bloque-cifras, .bloque-edicion, .bloque-resumen, .foto {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .foto {
+        height: 200px;
+    }
+    .foto-deadmau5 {
+        background-position: top;
+    }
+}
+
